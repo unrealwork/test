@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Page</title>
     <script>
-        window.location.href="about:blank";
+        if (Android && Android.success) {
+            Android.success()
+        } else {
+            window.location.href = "about:blank";
+        }
     </script>
 </head>
 <body>
